@@ -1,0 +1,6 @@
+we discussed about data types in java script:
+
+Whats is java Script and what is ecma script ?
+java script : is a programming language that follows ECMA script standard
+ECMA - european computer manufacturers association
+ECMA script : is a standard provider for scripting language (rules and regulation)
