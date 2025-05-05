@@ -1,0 +1,23 @@
+<script>
+    // let user={'name':'sachin','last name':'tendulkar','age':35,'add':'mumbai'};
+    // console.log(user.name);
+    // console.log(user['age']);
+    // // console.log(user.name);
+    // console.log(user['last name']);
+
+    // let x='add';
+    // console.log(user.x);
+    // console.log(user[x]);
+
+    // for(key in user)
+    // {
+    //     console.log(key+"===="+user[key]);
+    // }
+    let obj1 = { a: 10, b: 20 };
+    obj1.a = 15;   // change value of a property - yes
+    obj1.c = 30;   // add a new property - yes
+    delete obj1.b; // delete an existing property - yes
+    // console.log(obj1);
+    console.log(Object.isExtensible(obj1));
+    
+</script>

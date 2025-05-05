@@ -1,0 +1,23 @@
+<script>
+    let q7 = function(str){
+    let s = "";
+    for(let i=0;i<str.length;i++){
+        s = s.concat(str.charAt(i));
+        for(let j=0;j<str.length;j++){
+            if(j != i){
+                s = s.concat(str.charAt(j));
+                for(let k=0;k<str.length;k++){
+                    if(k != i && k != j){
+                        s = s.concat(str.charAt(k));
+                        console.log(s);
+                        s = s.substring(0,s.length-1);
+                    }
+                }
+                s = s.substring(0,s.length-1);
+            }
+        }
+        s = s.substring(0,s.length-1);
+    }
+}
+q7('ABC');
+</script>

@@ -1,0 +1,22 @@
+<script>
+let expression = prompt("Enter a sequence of parentheses:");
+let bracketStack = [];
+let isBalanced = true;
+let pairs = { '(': ')'
+,
+'[': ']'
+,
+'{': '}' };
+for (let symbol of expression) {
+if (symbol === '(' || symbol === '[' || symbol === '{') {
+bracketStack.push(symbol);
+} else if (Object.values(pairs).includes(symbol)) {
+if (bracketStack.length === 0 || pairs[bracketStack.pop()] !== symbol) {
+isBalanced = false;
+break;
+}
+}
+}
+8.
+console.log(isBalanced && bracketStack.length === 0);
+</script>

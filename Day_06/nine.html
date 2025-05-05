@@ -1,0 +1,21 @@
+<script>
+let romanInput = prompt("Enter a Roman number:");
+let romanValues = { 'I': 1,
+'V': 5,
+'X': 10,
+'L': 50,
+'C': 100,
+'D': 500,
+'M': 1000 };
+let prevValue = 0;
+let total = 0;
+for (let symbol of romanInput) {
+if (romanValues[symbol] <= prevValue) {
+total += romanValues[symbol];
+} else {
+total += romanValues[symbol] - 2 * prevValue;
+}
+prevValue = romanValues[symbol];
+}
+console.log(total);
+</script>

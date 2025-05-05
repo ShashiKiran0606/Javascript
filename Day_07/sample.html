@@ -1,0 +1,127 @@
+<script>
+    
+    let employees = [
+    { eId: 101, name: 'sanjay', sal: 5000, gender: 'male' },
+    { eId: 104, name: 'geeta', sal: 8000, gender: 'female' },
+    { eId: 103, name: 'sameer', sal: 7000, gender: 'male' },
+    { eId: 102, name: 'sita', sal: 9000, gender: 'female' },
+	{ eId: 105, name: 'deepak', sal: 8000, gender: 'male' }
+  ];
+    
+    //1. declare array of employees & sort them in ascending order (empId)
+
+    /*
+    employees.sort((a, b) => a.eId-b.eId); // asc
+
+    console.log(employees);
+    */
+
+    /*
+    //2. declare array of employees & sort them in ascending order by name.
+    employees.sort((a, b) => a.name.localeCompare(b.name)); // asc
+
+    console.log(employees); 
+    */
+
+    /*
+    //3. declare array of employees & filter the employees whose sal>6000;
+    let res=employees.filter((emp) => emp.sal >6000);
+    console.log(res);
+    */
+
+    /*
+    //4. declare array of employees & increase sal of every employee by 500;
+    employees.forEach(emp => {
+        emp.sal += 500;
+    });
+    console.log(employees);
+    */
+
+    /*
+    //5. declare array of employees & add "comp:ibm" to every employee;
+    employees.forEach(emp => {
+        emp['comp']='ibm';
+    })
+    console.log(employees);
+    */
+
+    /*
+    6. convert array of letters to array of words
+		const inputArr = [ 
+				'b', 'a', 'k', 'e', '',
+				'c', 'a', 'k', 'e', '',
+				'e', 'a', 't'
+				];
+	   output = ['bake','cake','eat'];
+    
+       const inputArr = [ 
+       'b', 'a', 'k', 'e', '',
+       'c', 'a', 'k', 'e', '',
+       'e', 'a', 't'
+       ];
+    let output = inputArr.reduce((prev, curr) => {
+        return prev+(curr===''?' ':curr);
+    });
+    console.log(output.split(' '))
+    */
+
+    //7. add Dept info for each employee
+    employees = [{eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+				{ eId: 104, name: "reena", sal: 8000, gender: "female" }];
+	departments = [{ eId: 101, dept: "sales" },
+				{ eId: 104, dept: "marketing" }];
+    employees.forEach(emp => {
+        departments.forEach(emp1 => {
+            if(emp.eId===emp1.eId)
+            {
+                emp['dept']=emp1.dept;
+            }
+        })
+    })
+    console.log(employees);
+
+    
+    /*
+    let deptMap = new Map();
+departments.forEach(d => deptMap.set(d.eId, d.dept));
+
+employees.forEach(emp => {
+  emp.dept = deptMap.get(emp.eId);
+});
+
+console.log(employees);
+*/
+  
+
+/*
+    8. declare array of employees & groupBy employees-name
+    sample output: {
+		'sanjay' : [{},{}],
+		'alok' : [{}]
+	}
+    */
+
+
+
+/*
+    //9. intersection of 2 number arrays
+    let arr1=[1,2,3,4,5];
+    let arr2=[6,4,3,5,2];
+
+    let res= arr1.filter((i)=>arr2.includes(i));
+    console.log(res);
+*/
+
+
+    /*
+    //10. WAP to print the occurance of each elements 
+    let input = [10,20,30,40,50,10,30,50]
+	let output = input.reduce((countMap, num) => {
+        countMap[num] = (countMap[num] || 0) + 1;
+        return countMap;
+      }, {});
+      
+      console.log(output);
+      */
+
+</script>
