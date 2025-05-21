@@ -1,0 +1,23 @@
+<!-- WAP to print Credit-card number
+   input:- '1111222233334444'
+   output:- '1111-2222-3333-4444' -->
+
+   <script>
+    let str = '1111222233334444';
+    let res='';
+    for ( let i =0 ; i< str.length; i++){
+        if (i!=0 && i%4 ==0){
+            res+='-'+ str[i];
+        }
+        else{
+            res+= str[i];
+        }
+    }
+    console.log(res);
+   //  let out = str.match(/[0-9]{1,4}/g).join('-');
+   //  console.log(out);
+   </script>
+
+   <script>
+
+   </script>

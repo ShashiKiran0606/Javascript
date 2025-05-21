@@ -1,0 +1,93 @@
+<!-- <script>
+    // 1. WAP to reverse a string
+	// input:- 'sachin'
+	// output:- 'nihcas
+let str = 'sachin';
+let reversed = '';
+for (let i = str.length - 1; i >= 0; i--) {
+    reversed += str[i]; 
+}
+console.log(reversed); 
+</script> -->
+<!-- <body>
+    <center>
+        <h2>Count is:: <span>0</span></h2>
+        <button onclick="increment()">Increment</button>
+        <button onclick="sayHi()">say hi</button>
+        <script>
+            function initializeCount() {
+                var count = 0;
+                return function () {
+                    count++;
+                    document.querySelector('span').innerHTML = count;
+                }
+            }
+            var increment = initializeCount();
+            console.dir(increment);
+            function sayHi() {
+                console.log('Hiiiiiiii');
+                count++;
+                document.querySelector('span').innerHTML = count;
+            }
+        </script>
+</body> -->
+<script>
+    let employees = [
+        { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
+        { "eId": 104, "name": "geeta", "sal": 8000, "gender": "female" },
+        { "eId": 103, "name": "sameer", "sal": 7000, "gender": "male" },
+        { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
+        { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
+    ];
+    // console.log(employees);
+    console.table(employees,['name','sal']);
+
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ui>
+        <li>options-1</li>
+        <li>options-2</li>
+        <li>options-3</li>
+        <li>options-4</li>
+        <li>options-5</li>
+    </ui>
+
+    <tbody>
+        <tr>
+            <td>list-3</td>
+            <td>list-3</td>
+            <td>list-3</td>
+        </tr>
+        <tr>
+            <td>list-3</td>
+            <td>list-3</td>
+            <td>list-3</td>
+        </tr>
+        <tr>
+            <td>list-3</td>
+            <td>list-3</td>
+            <td>list-3</td>
+        </tr>
+        <tr>
+            <td>list-3</td>
+            <td>list-3</td>
+            <td>list-3</td>
+        </tr>
+        <tr>
+            <td>list-3</td>
+            <td>list-3</td>
+            <td>list-3</td>
+        </tr>
+    </tbody>
+
+
+
+</body>
+</html>

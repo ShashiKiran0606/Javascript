@@ -1,23 +1,12 @@
 <script>
-    let q7 = function(str){
-    let s = "";
-    for(let i=0;i<str.length;i++){
-        s = s.concat(str.charAt(i));
-        for(let j=0;j<str.length;j++){
-            if(j != i){
-                s = s.concat(str.charAt(j));
-                for(let k=0;k<str.length;k++){
-                    if(k != i && k != j){
-                        s = s.concat(str.charAt(k));
-                        console.log(s);
-                        s = s.substring(0,s.length-1);
-                    }
-                }
-                s = s.substring(0,s.length-1);
-            }
-        }
-        s = s.substring(0,s.length-1);
+function print(str, res =""){
+    if (!str.length){
+        console.log(res);
     }
-}
-q7('ABC');
+    for(i=0; i< str.length; i++){
+        let currentchar = str.substr(i,1)
+        let remstr = str.substr(0,i) + str.substr(i+1);
+        print(remstr, res + currentchar);
+    }
+}print('ABC')
 </script>

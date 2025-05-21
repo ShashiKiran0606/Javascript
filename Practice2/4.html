@@ -1,0 +1,26 @@
+<!-- const inputArr = [
+    'b', 'a', 'k', 'e', '',
+    'c', 'a', 'k', 'e', '',
+    'e', 'a', 't'
+]; -->
+<script>
+let arr = [
+'b', 'a', 'k', 'e', '',
+'c', 'a', 'k', 'e', '',
+'e', 'a', 't'
+]; 
+
+let res =[];
+let word =''
+for (char of arr){
+    if (char!= ''){
+        word+= char
+    }
+    else{
+       res.push(word) 
+        word = '';
+    }
+}
+res.push(word);
+console.log(res)
+</script>

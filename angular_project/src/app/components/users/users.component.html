@@ -1,0 +1,45 @@
+<h3 class="text-center"> Users List</h3>
+
+<button class="btn btn-primary" (click)= "flag=!flag">Toggle View/Card</button>
+
+@if(flag){
+    <table class="table table-bordered table-striped">
+        <tbody>
+            @for(user of users; track $index)
+            {
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.address.city}}</td>
+                    <td>{{user.phone}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@else{
+    <div class="container">
+        <div class="row">
+            @for(user of users; track $index)
+            {
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                <img src="https://www.pngplay.com/wp-content/uploads/12/User-Avatar-Profile-Transparent-Clip-Art-PNG.png" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{user.name}}</h5>
+                    <p class="card-text">{{user.username}}</p>
+                    <p class="card-text">{{user.email}}</p>
+                    <p class="card-text">{{user.address.city}}</p>
+                    <p class="card-text">{{user.phone}}</p>
+                   
+
+                    <a href="#" class="btn btn-primary">Details</a>
+                </div>
+                </div>
+             </div>
+            }
+
+        </div>
+    </div>
+}

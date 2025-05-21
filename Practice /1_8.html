@@ -1,0 +1,24 @@
+<!-- WAP to check if 2 strings are anagram or not
+'listen' - 'silent'    anagram(every char of str1 should be there in str2) -->
+
+<script>
+    let str1 ='listen';
+    let str2 ='silent';
+let anagram = 0;
+
+for (let i = 0; i < str1.length; i++) {
+    for (let j = 0; j < str2.length; j++) {
+        if (str1[i] === str2[j]) {
+            anagram++;
+            str2 = str2.slice(0, j) + '*' + str2.slice(j + 1);
+            break;
+        }
+    }
+}
+
+if (anagram === str1.length) {
+    console.log(`The 2 strings "${str1}" and ${str2} are anagrams`);
+} else {
+    console.log(`The 2 strings "${str1}" and ${str2} are  not anagrams`);
+}
+</script>

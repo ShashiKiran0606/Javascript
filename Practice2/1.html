@@ -1,0 +1,18 @@
+<!-- Print the occurence of each character in a string
+input: 'entertainment'
+output: { e:3 , n:2 , t: 3 ....} -->
+
+<script>
+    let str = 'entertainment'
+    let res ={};
+    for (i of str){
+        if (res[i]){
+            res[i]++;
+        }
+        else{
+            res[i] = 1;
+        }
+    }
+    console.log(res);
+
+</script>

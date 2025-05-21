@@ -1,22 +1,45 @@
 <script>
-let expression = prompt("Enter a sequence of parentheses:");
-let bracketStack = [];
-let isBalanced = true;
-let pairs = { '(': ')'
-,
-'[': ']'
-,
-'{': '}' };
-for (let symbol of expression) {
-if (symbol === '(' || symbol === '[' || symbol === '{') {
-bracketStack.push(symbol);
-} else if (Object.values(pairs).includes(symbol)) {
-if (bracketStack.length === 0 || pairs[bracketStack.pop()] !== symbol) {
-isBalanced = false;
-break;
-}
-}
-}
-8.
-console.log(isBalanced && bracketStack.length === 0);
+// let expression = prompt("Enter a sequence of parentheses:");
+// let bracketStack = [];
+// let isBalanced = true;
+// let pairs = { '(': ')'
+// ,
+// '[': ']'
+// ,
+// '{': '}' };
+// for (let symbol of expression) {
+// if (symbol === '(' || symbol === '[' || symbol === '{') {
+// bracketStack.push(symbol);
+// } else if (Object.values(pairs).includes(symbol)) {
+// if (bracketStack.length === 0 || pairs[bracketStack.pop()] !== symbol) {
+// isBalanced = false;
+// break;
+// }
+// }
+// }
+// 8.
+// console.log(isBalanced && bracketStack.length === 0);
+
+
+let str = '([{ }])';
+    let stack = [];
+
+    for (let i = 0; i < str.length; i++) {
+        let ch = str[i]; //}
+
+        if (ch === '(' || ch === '{' || ch === '[') {
+            stack.push(ch);
+        } else if (ch === ')' && stack[stack.length - 1] === '(') {
+            stack.pop();
+        } else if (ch === '}' && stack[stack.length - 1] === '{') {
+            stack.pop();
+        } else if (ch === ']' && stack[stack.length - 1] === '[') {
+            stack.pop();
+        } else {
+            stack.push(ch);
+            break;
+        }
+    }
+
+    console.log(stack.length === 0);
 </script>
