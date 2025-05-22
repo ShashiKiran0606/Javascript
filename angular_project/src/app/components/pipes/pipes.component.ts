@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { RemainingPipe } from '../../pipes/remaining.pipe';
 import { MySortPipe } from '../../pipes/my-sort.pipe';
 import { OrdinalPipe } from '../../pipes/ordinal.pipe';
+import { RomanPipe } from '../../pipes/roman.pipe';
+import { AgePipe } from '../../pipes/age.pipe';
+import { SalutationPipe } from '../../pipes/salutation.pipe';
+import { SearchPipe } from '../../pipes/search.pipe';
 
 @Component({
   selector: 'app-pipes',
@@ -12,7 +16,11 @@ import { OrdinalPipe } from '../../pipes/ordinal.pipe';
     FormsModule,
     RemainingPipe,
     MySortPipe,
-    OrdinalPipe
+    OrdinalPipe,
+    RomanPipe,
+    AgePipe,
+    SalutationPipe,
+    SearchPipe
   ],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.css'
@@ -32,5 +40,20 @@ export class PipesComponent {
   arr2 = [10, 50, 30, 40, 20]
 
   num:number=0;
+  romanInput:number=0;
+  birthDate: Date= new Date();
+  employees = [
 
+    { "eId": 101, "name": "sanjay", "sal": 5000, "gender": "male" },
+
+    { "eId": 104, "name": "geeta", "sal": 8000, "gender": "female" },
+
+    { "eId": 103, "name": "sameer", "sal": 7000, "gender": "male" },
+
+    { "eId": 102, "name": "sita", "sal": 9000, "gender": "female" },
+
+    { "eId": 105, "name": "deepak", "sal": 8000, "gender": "male" }
+
+  ];
+  searchTxt:string='';
 }

@@ -94,21 +94,71 @@
     </div>
   </div>
 
-  <!-- <div class="border border-5 p-2 m-2 rounded-2">
-    <div>Create a custom pipe (ordinal) which takes a number as input and returns in ordinal format</div>
-    <h3>Number</h3> -->
-    <!-- <div>Ordinal (Custom Pipe)</div> -->
-    <!-- <input type="number" [(ngModel)]="num" /> -->
-    <!-- <div>Num value: {{num}}</div> -->
-    <!-- <div>Num value: {{num | ordinal}}</div> -->
-  <!-- </div> -->
-
   <div class="border border-5 p-2 m-2 rounded-2">
     <div>Create a custom pipe (ordinal) which takes a number as input and returns in ordinal format</div>
     <input type="number" [(ngModel)]="num" placeholder=" Enter a number">
     <div  p-2 m-2>ordinal number is {{ num | ordinal }}</div>
-
-     <!-- <input type="date" [(ngModel)]="birthDate" placeholder=" Enter DOB"> 
-    <h6>after calculating age he is {{ birthDate | age }} years old</h6> -->
-
+    
  </div>
+
+<div class="border p-2 m-2 rounded-2">
+  <div>Number to Roman Custom Pipe</div>
+  <input type="number" [(ngModel)]="romanInput"/>
+  <div>Num value is {{romanInput}}</div>
+  <div>Roman value is {{romanInput | roman}}</div>
+</div>
+
+<div class="border p-2 m-2 rounded-2">
+  <div>Age Custom Pipe</div>
+  <input type="Date" [(ngModel)]="birthDate"/>
+  <div>BirthDate is {{birthDate}}</div>
+  <div>{{birthDate | age}} years old</div>
+</div>
+
+<div class="border p-2 m-2 rounded-2">
+  <div>Salutation Custom Pipe</div>
+
+  <table class="table table-bordered table-striped">
+  <tbody>
+  <tr>
+      <th>eId</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+  </tr>
+  @for (employee of employees;track $index){
+  <tr>
+    <td>{{ employee.eId }}</td>
+    <td>{{ employee.name | salutation : employee.gender}}</td>
+    <td>{{ employee.sal }}</td>
+    <td>{{ employee.gender }}</td>
+  </tr>
+  }
+  </tbody>
+  </table>
+</div>
+
+<div class="border p-2 m-2 rounded-2">
+  <div>Search/filter Custom Pipe</div>
+  <input type="text" [(ngModel)]="searchTxt" placeholder="Search employees..." />
+  <table class="table table-bordered table-striped">
+  <tbody>
+  <tr>
+      <th>eId</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+  </tr>
+  @for (employee of employees| search:searchTxt;track $index){
+  <tr>
+    <td>{{ employee.eId }}</td>
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.sal }}</td>
+    <td>{{ employee.gender }}</td>
+  </tr>
+  }
+  </tbody>
+  </table>
+</div>
+
+ 
