@@ -1,0 +1,25 @@
+<h3 style="text-align: center;">Employee list</h3>
+<table class="table table-bordered table-striped me-3">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Gender</th>
+      <th>DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (employee of employees; track $index) {
+      <tr>
+        <td>{{ employee.eId }}</td>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.sal }}</td>
+        <td>{{ employee.gender }}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="deleteEmployee($index)"><fa-icon [icon]="faTrash"></fa-icon></button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table> 

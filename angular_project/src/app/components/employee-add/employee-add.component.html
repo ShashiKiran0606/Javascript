@@ -1,0 +1,12 @@
+<h3 class="text-center mb-4">Add Employee</h3>
+<form (ngSubmit)="addEmployee()" #employeeForm="ngForm" class="d-flex flex-wrap align-items-center gap-2">
+    <input type="text" class="form-control form-control-sm" placeholder="ID" [(ngModel)]="newEmployee.eId" name="eId" required style="max-width: 150px;">
+    
+    <input type="text" class="form-control form-control-sm" placeholder="Name" [(ngModel)]="newEmployee.name" name="name" required style="max-width: 150px;">
+    
+    <input type="text" class="form-control form-control-sm" placeholder="Salary" [(ngModel)]="newEmployee.sal" name="sal" required style="max-width: 150px;">
+    
+    <input type="email" class="form-control form-control-sm" placeholder="Gender" [(ngModel)]="newEmployee.gender" name="gender" required style="max-width: 200px;">
+    
+    <button type="submit" class="btn btn-success btn-sm" [disabled]="!employeeForm.form.valid">Add Employee</button>
+  </form>

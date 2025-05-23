@@ -8,6 +8,7 @@ import { Demo1Component } from '../demo1/demo1.component';
 import { EmployeeCRUDComponent } from '../employee-crud/employee-crud.component';
 import { PipesComponent } from '../pipes/pipes.component';
 import { ParentComponent } from '../parent/parent.component';
+import { EmployeeCRUDparentComponent } from '../employee-crudparent/employee-crudparent.component';
 
 @Component({
   selector: 'app-body',
@@ -20,7 +21,8 @@ import { ParentComponent } from '../parent/parent.component';
     // Demo1Component
     // EmployeeCRUDComponent
     // PipesComponent
-    ParentComponent
+    // ParentComponent
+    EmployeeCRUDparentComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
