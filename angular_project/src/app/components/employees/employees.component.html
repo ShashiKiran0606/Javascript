@@ -1,0 +1,58 @@
+<h3 class="text-center"> Employee List</h3>
+
+<div class="text-center">
+  <select id="employeeFilter" [(ngModel)]="filter" (click)="getFilteredEmployees()">
+    <option value="allEmployees">All Employees</option>
+    <option value="maleEmployees">Male Employees</option>
+    <option value="femaleEmployees">Female Employees</option>
+  </select>
+</div>
+
+<button class="btn btn-primary p-2 m-2" (click)= "flag=!flag">Toggle Table/Card</button>
+
+
+@if(flag){
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Salary</th>
+              <th>Gender</th>
+            </tr>
+          </thead>
+        <tbody>
+            @for(employee of employees; track $index)
+            {
+                <tr>
+                    <td>{{ employee.eId }}</td>
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.sal }}</td>
+                    <td>{{ employee.gender }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@else{
+    <div class="container">
+        <div class="row">
+            @for(employee of employees; track $index)
+            {
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                <img src="https://www.pngplay.com/wp-content/uploads/12/User-Avatar-Profile-Transparent-Clip-Art-PNG.png" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Employee Details</h5>
+                    <p class="card-text">ID : {{employee.eId}}</p>
+                    <p class="card-text">Name : {{employee.name}}</p>
+                    <p class="card-text">Salary : {{employee.sal}}</p>
+                    <p class="card-text"> Gender : {{employee.gender}}</p>
+                </div>
+                </div>
+             </div>
+            }
+
+        </div>
+    </div>
+}
