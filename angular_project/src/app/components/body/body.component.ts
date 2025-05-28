@@ -13,6 +13,8 @@ import { Math1Component } from '../math1/math1.component';
 import { Math2Component } from '../math2/math2.component';
 import { EmployeesComponent } from '../employees/employees.component';
 import { HttpDemo1Component } from '../http-demo1/http-demo1.component';
+import { HttpUserComponent } from '../http-user/http-user.component';
+import { HttpDemo2Component } from '../http-demo2/http-demo2.component';
 
 @Component({
   selector: 'app-body',
@@ -30,7 +32,9 @@ import { HttpDemo1Component } from '../http-demo1/http-demo1.component';
     // Math1Component,
     // Math2Component,
     // EmployeesComponent,
-    HttpDemo1Component
+    // HttpDemo1Component,
+    // HttpUserComponent,
+    HttpDemo2Component
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
